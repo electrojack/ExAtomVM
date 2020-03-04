@@ -40,9 +40,11 @@ defmodule Mix.Tasks.Atomvm.Check do
           ["#{test}" | acc]
 
         instr, acc when is_tuple(instr) ->
+          IO.inspect(instr)
           ["#{elem(instr, 0)}" | acc]
 
         instr, acc when is_atom(instr) ->
+          IO.inspect(instr)
           ["#{instr}" | acc]
       end)
 
