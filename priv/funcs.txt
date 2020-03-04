@@ -302,3 +302,8 @@ erlang:get_module_info/2
 atomvm:platform/0
 uart:open/2
 uart:read/1
+http_server:start_server/2
+http_server:parse_query_string/1
+http_server:reply/3
+network_fsm:start/1
+erlang:error/1
