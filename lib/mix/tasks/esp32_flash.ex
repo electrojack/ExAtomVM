@@ -14,7 +14,7 @@ defmodule Mix.Tasks.Atomvm.Esp32.Flash do
          idf_path <- System.get_env("IDF_PATH", <<"">>) do
       chip = Map.get(options, :chip, Keyword.get(avm_config, :chip, "esp32"))
       port = Map.get(options, :port, Keyword.get(avm_config, :port, "/dev/ttyUSB0"))
-      baud = Map.get(options, :baud, Keyword.get(avm_config, :baud, "115200"))
+      baud = Map.get(options, :baud, Keyword.get(avm_config, :baud, "1000000"))
 
       flash_offset =
         Map.get(options, :flash_offset, Keyword.get(avm_config, :flash_offset, 0x210000))
